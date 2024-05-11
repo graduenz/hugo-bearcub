@@ -1,5 +1,5 @@
 body {
-  font-family: Verdana, sans-serif;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,avenir next,avenir,segoe ui,helvetica neue,helvetica,Cantarell,Ubuntu,roboto,noto,arial,sans-serif;
   margin: auto;
   padding: 20px;
   max-width: 720px;
@@ -92,10 +92,11 @@ pre code {
 }
 
 blockquote {
-  border-left: 1px solid #999;
+  border-left: 4px solid #999;
   color: #ccc;
   padding-left: 20px;
   font-style: italic;
+  margin: 0;
 }
 
 footer {
@@ -125,7 +126,7 @@ ul.blog-posts li {
 }
 
 ul.blog-posts li span {
-  flex: 0 0 130px;
+  flex: 0 0 120px;
 }
 
 ul.blog-posts li a:visited {
@@ -134,7 +135,8 @@ ul.blog-posts li a:visited {
 
 a.blog-tags {
   line-height: 2;
-  margin-right: 12px;
+  margin-right: 8px;
+  font-size: small;
 }
 
 h3.blog-filter {

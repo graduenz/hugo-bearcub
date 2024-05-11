@@ -57,7 +57,16 @@
   {{ if .Store.Get "hasMermaid" }}
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true });
+
+      const mermaidConfig = {
+            theme: 'dark',
+            logLevel: 'fatal',
+            securityLevel: 'strict',
+            startOnLoad: true,
+            arrowMarkerAbsolute: false,
+      };
+      
+      mermaid.initialize(mermaidConfig);
     </script>
   {{ end }}
 </body>

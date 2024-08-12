@@ -46,7 +46,8 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
-<meta property="og:image" content="{{ $card.Permalink | absURL }}"/>
+<!-- <meta property="og:image" content="{{ $card.Permalink | absURL }}"/> -->
+<meta property="og:image" content="https://vercel-og-nextjs-one-beta.vercel.app/api/rdnz?title={{ urlquery .Title }}"/>
 
 {{- if .IsPage }}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
@@ -93,7 +94,8 @@
 <!-- Twitter -->
 <!-- Source: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/twitter_cards.html -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ $card.Permalink | absURL }}"/>
+<!-- <meta name="twitter:image" content="{{ $card.Permalink | absURL }}"/> -->
+<meta property="twitter:image" content="https://vercel-og-nextjs-one-beta.vercel.app/api/rdnz?title={{ urlquery .Title }}"/>
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
 
@@ -129,7 +131,8 @@
 {{ with .Lastmod }}<meta itemprop="dateModified" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end}}
 <meta itemprop="wordCount" content="{{ .WordCount }}">
 
-<meta itemprop="image" content="{{ $card.Permalink | absURL }}"/>
+<!-- <meta itemprop="image" content="{{ $card.Permalink | absURL }}"/> -->
+<meta itemprop="image" content="https://vercel-og-nextjs-one-beta.vercel.app/api/rdnz?title={{ urlquery .Title }}"/>
 
 <!-- Output all taxonomies as schema.org keywords -->
 <meta itemprop="keywords" content="{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}{{ end }}" />
